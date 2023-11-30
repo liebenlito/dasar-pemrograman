@@ -47,6 +47,7 @@
 
 class Item:
     rate_bayar = 0.8
+    temp = []
     def __init__(self, nama: str, harga: float, qty=0):
         assert harga >= 0, f"Harga {harga} tidak lebih dari atau sama dengan 0"
         assert qty >= 0, f"Harga {qty} tidak lebih dari atau sama dengan 0"
@@ -55,11 +56,14 @@ class Item:
         self.harga = harga
         self.qty = qty
 
+        Item.temp.append(self)
+
     def hitung_total_harga(self):
         return self.harga * self.qty
     
     def diskon(self):
         self.harga = self.harga * self.rate_bayar
+
     
 # item1 = Item("Laptop", 2000, 3)
 # item1.diskon()
@@ -71,5 +75,21 @@ class Item:
 # item2.diskon()
 # print(item2.harga)
 
+# item3 = Item("Komputer", 6000, 2)
+# print(item3.hitung_total_harga())
+
+item1 = Item("Laptop", 2000, 3)
+item2 = Item("Ponsel", 1500, 5)
 item3 = Item("Komputer", 6000, 2)
-print(item3.hitung_total_harga())
+item4 = Item("Speaker", 1200, 2)
+item5 = Item("Kamera", 1100, 2)
+
+# print(item1.__dict__)
+# print(Item.__dict__)
+
+# print(Item.temp)
+# print(len(Item.temp))
+
+for item in Item.temp:
+    print(item.nama)
+    print(item.hitung_total_harga())
