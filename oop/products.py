@@ -35,6 +35,18 @@
 # item1 = Item("Laptop", 2000, 2)
 # item2 = Item("Ponsel", 1500, 3)
 
+# class Item:
+#     def __init__(self, nama, harga, qty):
+#         self.nama = nama
+#         self._harga = harga
+#         self.qty = qty
+
+#     def hitung_total(self):
+#         return self._harga * self.qty
+    
+# item = Item("Kipas", 2000, 1)
+# print(Item.__dict__)
+
 # print(item1.nama)
 # print(item1.harga)
 # print(item1.qty)
@@ -78,11 +90,11 @@ class Item:
 # item3 = Item("Komputer", 6000, 2)
 # print(item3.hitung_total_harga())
 
-item1 = Item("Laptop", 2000, 3)
-item2 = Item("Ponsel", 1500, 5)
-item3 = Item("Komputer", 6000, 2)
-item4 = Item("Speaker", 1200, 2)
-item5 = Item("Kamera", 1100, 2)
+# item1 = Item("Laptop", 2000, 3)
+# item2 = Item("Ponsel", 1500, 5)
+# item3 = Item("Komputer", 6000, 2)
+# item4 = Item("Speaker", 1200, 2)
+# item5 = Item("Kamera", 1100, 2)
 
 # print(item1.__dict__)
 # print(Item.__dict__)
@@ -90,6 +102,6 @@ item5 = Item("Kamera", 1100, 2)
 # print(Item.temp)
 # print(len(Item.temp))
 
-for item in Item.temp:
-    print(item.nama)
-    print(item.hitung_total_harga())
+# for item in Item.temp:
+#     print(item.nama)
+#     print(item.hitung_total_harga())
